@@ -15,7 +15,7 @@ export default function TodoList({ todos, onToggle, onDelete }: Props) {
     return (
         <div>
             {todos.map((todo) => (
-                <TodoItem key={todo.id} {...todo} onToggle={onToggle} onDelete={onDelete} />
+                <TodoItem key={todo.id} {...todo} onToggle={() => onToggle(todo.id)} onDelete={() => onDelete(todo.id)} />
             ))}
         </div>
     );
