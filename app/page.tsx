@@ -10,7 +10,7 @@ export default function Home() {
   const { todos, addTodo, toggleTodo, deleteTodo } = useTodos();
 
   return (
-    <main className="bg-white rounded-2xl shadow-lg p-6 space-y-4">
+    <main className="bg-card rounded-2xl shadow-card p-6 space-y-4">
       <Header />
       <TodoInput onAdd={addTodo} />
       <TodoList todos={todos} onToggle={toggleTodo} onDelete={deleteTodo} />
